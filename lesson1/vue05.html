@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="a1">
+<huang v-for="message in messages" v-bind:sad="message"></huang>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+<script>
+  Vue.component("huang",{//第一是名字
+    props:['sad'],//双肩号+引号
+    template:'<li>{{sad}}</li>'//引号
+  })
+  var vm =new Vue({
+    el:"#a1",
+    data:{messages:["wjh","hjh","czk"]
+    }
+  });
+</script>
+</body>
+</html>

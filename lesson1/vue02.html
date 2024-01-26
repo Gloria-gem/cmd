@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <div id="vue" v-if="massage==='ok'">
+         :message
+ </div>
+ <div id="app" >
+   <li v-for="item in items">
+     {{item.message}}
+   </li>
+ </div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+<script>
+   var ve = new Vue({
+     el:"#vue",
+     data:{
+        massage:'ok'
+     }
+   });
+   var vm = new Vue({
+     el: '#app',
+     data: {
+//items数组
+       items: [
+         {message: '狂神说Java'},
+         {message: '狂神说前端'}
+       ]
+     }
+   });
+</script>
+</body>
+</html>
